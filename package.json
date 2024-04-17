@@ -1,0 +1,12 @@
+{
+  "name": "bobs-bagels-pair-programming-araz-mukund",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+	"type": "module",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "araz-mukund",
+  "license": "ISC"
+}
