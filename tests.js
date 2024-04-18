@@ -8,10 +8,11 @@ const expected = "added item to basket";
 let actual, result;
 // const input = new Item();
 // const expected = [item]
-// actual = basket.addItemToBasket(basket, item)
+
 
 // Act
 actual = addItemToBasket(basket, item)
+// actual = basket.addItemToBasket(basket, item)
 
 // Assert
 result = assertEquals(actual, expected);
