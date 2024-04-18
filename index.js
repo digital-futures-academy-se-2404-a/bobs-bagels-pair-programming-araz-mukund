@@ -19,3 +19,15 @@ export function addItemToBasket(basket, item) {
 }
 
 // This is a test! do not evacuate the building!
+/* 
+export class Basket {
+  constructor() {
+    this.items = [];
+  }
+
+addItemToBasket(basket, item) {
+	basket.addItem(item)
+                              }
+
+                    }
+*/
