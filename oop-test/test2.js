@@ -42,9 +42,6 @@ afterEach();
 
 //! END OF TEST 1
 
-
-
-
 //? TEST 2
 //* Test that the removed item, which is an instance of Item, is actually not in the basket
 
@@ -59,6 +56,7 @@ testItem = new Item();
 
 // Act
 basket.addItem(testItem);
+basket.removeBasketItem(testItem);
 actual = !basket.getBasketItems().includes(testItem);
 
 // Assert
