@@ -27,7 +27,7 @@ let actual, result;
 
 // Act
 basket.addItem(testItem);
-actual = basket.getBasketItems.length;
+actual = basket.getBasketItems().length;
 // Assert
 result = assertEquals(actual, expected);
 
