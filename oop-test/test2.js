@@ -12,21 +12,22 @@ const afterEach = () => {
 };
 
 //? TEST 1
-//* Add item to basket using addItem and expect array (basketItems) has increased in length by 1
+//* Remove item from basket using removeItem and expect array basketItems has decreased in length by 1
 
 console.log(`Test 1`);
 console.log(`==================`);
 console.log(
-    `Add item to basket using addItem and expect array (basketItems) has increased in length by 1`
+    `Remove item from basket using removeItem and expect array basketItems to have decreased in length by 1`
 );
 // Arrange
 let basket = new Basket()
-let expected = basket.getBasketItems.length + 1
 let testItem = new Item();
+basket.addItem(testItem)
+let expected = 0
 let actual, result;
 
 // Act
-basket.addItem(testItem);
+basket.removeBasketItem(testItem);
 actual = basket.getBasketItems().length;
 // Assert
 result = assertEquals(actual, expected);
@@ -45,11 +46,11 @@ afterEach();
 
 
 //? TEST 2
-//* Test that item passed to addItem is actually added to the basket
+//* Test that the removed item, which is an instance of Item, is actually not in the basket
 
 console.log(`Test 2`);
 console.log(`==================`);
-console.log(`Test that item passed to addItem is actually added to the basket`);
+console.log(`Test that item removed by addItem is actually no longer in the basket`);
 // Arrange
 //! testItem is defined in the test setup for test 1
 basket = new Basket();
@@ -58,7 +59,7 @@ testItem = new Item();
 
 // Act
 basket.addItem(testItem);
-actual = basket.getBasketItems().includes(testItem);
+actual = !basket.getBasketItems().includes(testItem);
 
 // Assert
 result = assertEquals(actual, expected);
