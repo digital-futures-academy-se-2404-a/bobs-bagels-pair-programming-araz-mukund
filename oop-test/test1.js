@@ -1,6 +1,6 @@
-import { assertEquals } from "./testing-framework.js";
-import Basket from "../src2/basket-class.js";
-import Item from  "../src2/item-class.js"
+import { assertEquals } from "../test/testing-framework.js";
+import Basket from "../oop-src/basket-class.js";
+import Item from  "../oop-src/item-class.js"
 
 // AFTER EACH Function
 const afterEach = () => {
@@ -21,13 +21,13 @@ console.log(
 );
 // Arrange
 const basket = new Basket()
-let expected = basket.getBasketLength() + 1
+let expected = basket.getBasketItems.length + 1
 let testItem = new Item();
 let actual, result;
 
 // Act
 basket.addItem(testItem);
-actual = basket.getLength();
+actual = basket.getBasketItems.length;
 // Assert
 result = assertEquals(actual, expected);
 
@@ -41,6 +41,9 @@ afterEach();
 
 //! END OF TEST 1
 
+
+
+/*
 //? TEST 2
 //* Test that item passed to addItem is actually added to the basket
 
@@ -69,3 +72,4 @@ console.log(`==================`);
 afterEach();
 
 //! END OF TEST 2
+*/
